@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --bg-color: #e1d5d5;
+    --navbar-bg-color: #c7b2b2;
+    --theme-changer-bg-color: #e6b4b4;
+    --hamburger-bg-color: #D0D3D4;
+    --hamburger-hover-bg-color: #6398a9;
+    --phone-opt-bg-color: rgb(210, 150, 150);
+    --phone-opt-close-btn: rgb(208, 180, 180);
+}
+
+.dark-mode {
+    --bg-color: #171818;
+    --navbar-bg-color: #261f1f;
+    --theme-changer-bg-color: #252020;
+    --hamburger-bg-color: #212F3D;
+    --hamburger-hover-bg-color: #151f23;
+    --phone-opt-bg-color: rgb(44, 33, 33);
+    --phone-opt-close-btn: rgb(57, 42, 42);
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.web-name {
+    color: #ed1283;
+    font-size: 35px;
+    margin: 3px;
+    font-family: Nunito, sans-serif;
+    margin-right: auto;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0px;
+    overflow: hidden;
+    background-color: var(--navbar-bg-color);
+    display: flex;
+    justify-content: right;
+}
+
+.navbar a {
+    color: #107dcb;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    color: #1170b5;
+}
+
+.theme-changer {
+    background-color: var(--theme-changer-bg-color);
+    cursor: pointer;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+#hamburger-menu:hover {
+    background-color: var(--hamburger-hover-bg-color);
+}
+
+#phone-options {
+    border-radius: 5%;
+    background-color: var(--phone-opt-bg-color);
+    box-sizing: border-box;
+    width: 80px;
+    height: 115px;
+    text-align: center;
+    position: absolute;
+    right: 8px;
+    bottom: 440px;
+}
+
+#phone-options button {
+    width: 65px;
+    height: 25px;
+    background-color: var(--phone-opt-close-btn);
+    cursor: pointer;
+    margin: 5px;
+}
+
+#phone-options a {
+    text-decoration: none;
+    color: #107dcb;
+    font-size: 18px;
+    margin: 5px;
+}
+
+#phone-options a:hover {
+    color: #1170b5;
+}
+
+#system {
+    color: white;
+}
+
+
+@media (max-width: 494px) {
+    .web-name {
+        font-size: 18px;
+    }
+
+    .navbar a {
+        display: none;
+    }
+
+    .theme-changer {
+        display: none;
+    }
+
+    #hamburger-menu {
+        display: block;
+        background-color: var(--hamburger-bg-color);
+        cursor: pointer;
+    }
+}
