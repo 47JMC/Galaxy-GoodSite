@@ -30,13 +30,13 @@ function PhoneNavbarOptionsToggler() {
 }
 
 async function GithubInfo() {
+    let githubDisplayName = document.getElementById("github-display-name")
     try {
         let github_username = document.getElementById("github-username").value;
         let response = await fetch(`https://api.github.com/users/${github_username}`);
         let data = await response.json();
 
         let profilePicture = document.getElementById("github-profile-picture")
-        let githubDisplayName = document.getElementById("github-display-name")
         let githubBio = document.getElementById("github-bio")
         let github_PublicRepos = document.getElementById("github-public_repos")
         let github_Company = document.getElementById("github-company")
@@ -72,6 +72,7 @@ async function GithubInfo() {
         }
     }
     catch (error) {
-        console.error(error);
+        githubDisplayName.innerText = "Error: " + error.message
+        githubDisplayName.style.display = "block"
     }
 }
