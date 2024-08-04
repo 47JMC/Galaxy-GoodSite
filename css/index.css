@@ -106,14 +106,14 @@ body {
     align-items: center;
 }
 
-.github-info input {
+.github-info input{
     width: 500px;
     height: 50px;
     background-color: var(--github-input);
     border-radius: 8px;
     font-size: 18px;
     text-align: center;
-    margin: 18px;
+    margin: 18px;    
 }
 
 .github-info button {
@@ -223,6 +223,10 @@ body {
     left: 355px;
 }
 
+.animate {
+    animation: SlideFromLeft 2s ease 0s 1;
+}
+
 .web-footer {
     display: flex;
     justify-content: center;
@@ -238,12 +242,23 @@ body {
     opacity: 50%;
 }
 
+@keyframes SlideFromLeft {
+    0% {
+        transform: translateX(-650px);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 @keyframes SlideFromBottom {
     0% {
         opacity: 0;
         transform: translateY(45px);
     }
-
     100% {
         opacity: 100%;
         transform: translateY(0px);
